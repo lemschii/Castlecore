@@ -1,10 +1,10 @@
 ~~---Art Checklist---~~ NO NARCOTICS
 
-[ ] Barrel
+[x] Barrel
 
 |
 
-[ ] Torch
+[x] Torch
 
 |
 
@@ -12,7 +12,7 @@
 
 |
 
-[ ] Bonfire
+[x] Bonfire
 
 |
 
