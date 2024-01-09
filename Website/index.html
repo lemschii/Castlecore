@@ -1,0 +1,159 @@
+
+<html>
+    <head>
+        <title>CastleCore</title>
+        <link rel="icon" href="icon.png">
+        <style>
+            html {
+                background-image: url(background.jpg);
+                background-attachment: fixed;
+                background-size: 100% auto;
+            }
+            .normal-content{
+                text-align: center;
+                font-size: 2em;
+                font-family: sans-serif;
+                color: white;
+                text-shadow: 0 0 5px #770001;
+            }
+            video{
+                display: block;
+                margin: 0 auto;
+                max-width: 1000;
+                width: 95%;
+                border-image: fill;
+            }
+            .team-section{
+                display: flex;
+                flex-wrap: wrap;
+                
+            }
+            .team {
+	            display: flex; 
+                padding: 0.5em;
+	            width: 100%;
+                
+                
+            }
+            /*-----For Mobil: --------*/
+            @media (max-width: 600px) {
+               .body {
+                  background-image: url(background.jpg);
+                }
+                .team {
+                width: 100%;
+                }
+                .team-content{
+                    height: 900px;
+                }
+                .team-h1{
+                margin-top: 200px;
+            }
+           }
+
+           /*-----For tablets: ---------------*/
+           @media (min-width: 601px) and (max-width: 1024px) {
+               .body {
+                   background-image: url(background.jpg);
+                }
+                .team {
+                    width: 48%;
+                }
+                .team-content{
+                    height: 650px;
+                }
+                .team-h1{
+                margin-top: 100px;
+            }
+           }
+
+           /*-----For desktop devices ------*/
+           @media (min-width: 1025px) {
+              .miracle {
+                  background-image: url(background.jpg);
+                }
+                .team {
+                width: 32%;
+                }
+                .team-content{
+                    height: 900px;
+                }
+                .team-h1{
+                margin-top: 200px;
+                }
+           }
+            
+            .team-content{
+                
+                display: flex;
+                flex-direction: column;
+                padding: 1em;
+	            width: 100%;
+                text-align: center;
+                background-image: url(team-background.png)  ;
+                background-size:100% auto ;
+                background-position: center;
+                background-repeat: no-repeat;
+            }
+            .team-content p {
+	            flex: 1 0 auto;
+            }
+            .team-image{
+               align-self: center;
+               height: 200px;
+               width: 200px;
+            }
+            .image-circle{
+                align-self: center;
+                border-radius: 50%;
+                overflow: hidden;
+                height: 200px;
+                width: 200px;
+            }
+            .circle-image{
+                width: 100%;
+                height: auto;
+            }
+            
+        </style>
+    </head>
+    <body>
+        <h1 class="normal-content">Castle Core</h1>
+        <h2 class="normal-content">Story</h2>
+        <p class="normal-content">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum. Nam quam nunc, blandit vel, luctus pulvinar, hendrerit id, lorem. Maecenas nec odio et ante tincidunt tempus. Donec vitae sapien ut libero venenatis faucibus. Nullam quis ante. Etiam sit amet orci eget eros faucibus tincidunt. Duis leo. Sed fringilla mauris sit amet nibh. Donec sodales sagittis magna. Sed consequat, leo eget bibendum sodales, augue velit cursus nunc,</p>
+        <h2 class="normal-content">Promo Video</h2>
+        <Video class="mp4" src="Promo-Video.mp4"></Video>
+        <h2 class="normal-content">Über uns</h2>
+        <section class="team-section">
+            <article class="team">
+                <div class="team-content">
+                    
+                    <h1 class="normal-content team-h1">Felix</h1>
+                    <div class="image-circle">
+                <img src="Felix.jpg" alt="" class="circle-image" >
+                </div>
+                    <p class="normal-content">Programmierer <br>Zuständig für: Unity, Leveldisign </p>
+                </div>
+            </article>
+            <article class="team"  >
+                <div class="team-content">
+                <h1 class="normal-content team-h1">Martin</h1>
+                <div class="image-circle">
+                <img src="Martin.jpg" alt="" class="circle-image" >
+                </div>
+                <p class="normal-content">Marketing <br>Zuständig für: Website, Video </p>
+                </div>
+            </article>
+            <article class="team" >
+                <div class="team-content">
+                    
+                <h1 class="normal-content team-h1">Jonny</h1>
+                <div class="image-circle">
+                    <img src="Jonny.jpg" alt="" class="circle-image" >
+                </div>
+                <p class="normal-content">Disigner <br>Zuständig für: Animationen, Sprites und Pixelart</p>
+                </div>
+            </article>
+        </section>
+    </body>
+</html>
