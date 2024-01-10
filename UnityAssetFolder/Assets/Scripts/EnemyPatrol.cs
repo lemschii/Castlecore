@@ -54,7 +54,10 @@ public class EnemyPatrol : MonoBehaviour {
 
     // Update is called once per frame
     void Update () {
-        if (!onGround)
+        if (this.enabled == true)
+        {
+            Debug.Log("boobds");
+            if (!onGround)
             {
                 count = 0;
                 duration = 0;
@@ -69,6 +72,8 @@ public class EnemyPatrol : MonoBehaviour {
             {
                 count++;
             }
+        }
+        
     }
 
     void pickAction() {
