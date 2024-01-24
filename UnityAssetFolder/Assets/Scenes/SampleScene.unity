@@ -699,7 +699,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -2253911629886400664, guid: 521e6f12ef654ca41971cc366b4be13e, type: 3}
       propertyPath: m_Name
-      value: Enemy_v1_walk
+      value: Enemy1
       objectReference: {fileID: 0}
     - target: {fileID: -2253911629886400664, guid: 521e6f12ef654ca41971cc366b4be13e, type: 3}
       propertyPath: m_Layer
@@ -1625,6 +1625,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   animator: {fileID: 1730494985}
   maxHealth: 100
+  enemypatrol: {fileID: 1730494984}
 --- !u!4 &1730494983 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7878350319992209165, guid: 521e6f12ef654ca41971cc366b4be13e, type: 3}
