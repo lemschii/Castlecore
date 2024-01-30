@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
@@ -7,7 +8,7 @@ public class PlayerMovement : MonoBehaviour
     public float jumpingPower = 16f;
     private bool isFacingRight = true;
 
-   // public Animator anim = new Animator();
+    public Animator animator;
 
     private bool isWallSliding;
     public float wallSlidingSpeed = 2f;
@@ -25,6 +26,11 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private Transform wallCheck;
     [SerializeField] private LayerMask wallLayer;
 
+    private void Start()
+    {
+        animator = GetComponent<Animator>();
+    }
+
     private void Update()
     {
         horizontal = Input.GetAxisRaw("Horizontal");
@@ -35,11 +41,15 @@ public class PlayerMovement : MonoBehaviour
         if (Input.GetButtonDown("Jump") && IsGrounded())
         {
             rb.velocity = new Vector2(rb.velocity.x, jumpingPower);
+            //setJumpAnimation
+            animator.SetBool("isJumping", !IsGrounded()); //MaybeDesÄndern!!!!!!!!!!!!!!!! //
         }
 
         if (Input.GetButtonUp("Jump") && rb.velocity.y > 0f)
         {
             rb.velocity = new Vector2(rb.velocity.x, rb.velocity.y * 0.5f);
+            //animator.SetBool("isJumping", !IsGrounded()); MAYBE DES TRUE SETZENAHFUOWHarwafa
+            
         }
 
         WallSlide();
@@ -55,6 +65,8 @@ public class PlayerMovement : MonoBehaviour
 
     private void FixedUpdate()
     {
+        animator.SetFloat("xVelocity", Math.Abs(rb.velocity.x));
+        animator.SetFloat("yVelocity", rb.velocity.y);
         if (!isWallJumping)
         {
             rb.velocity = new Vector2(horizontal * speed, rb.velocity.y);
