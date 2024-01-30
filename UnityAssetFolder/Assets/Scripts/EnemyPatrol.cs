@@ -73,7 +73,7 @@ public class EnemyPatrol : MonoBehaviour {
                 count++;
             }
         }
-        
+
     }
 
     void pickAction() {
