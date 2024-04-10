@@ -76,7 +76,8 @@ public class Enemy : MonoBehaviour
         enemypatrol.enabled = false;
         //disable enemy
         gameObject.layer = 6;
-        
+
+        enemyLayers.value = 10;
         Debug.Log("PostEnabledFalse");
         
     }
