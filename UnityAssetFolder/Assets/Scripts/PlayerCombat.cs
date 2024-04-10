@@ -6,6 +6,7 @@ public class PlayerCombat : MonoBehaviour
 {
     public Transform attackPoint;
     public LayerMask enemyLayers;
+    public Animator animator;
     
     public float attackRange = 0.5f;
     public int attackDamage = 50;
@@ -13,6 +14,14 @@ public class PlayerCombat : MonoBehaviour
     public float attackRate = 2f;
     private float nextAttacktime = 0f;
     
+    public int maxHealth;
+    private int currentHealth;
+    
+    private void Start()
+    {
+        animator = GetComponent<Animator>();
+        currentHealth = maxHealth;
+    }
     // Update is called once per frame
     void Update()
     {
@@ -40,5 +49,24 @@ public class PlayerCombat : MonoBehaviour
             //Debug.Log("Hit  " + enemy.name);
             enemy.GetComponent<Enemy>().TakeDamage(attackDamage);
         }
+    }
+    
+    public void TakeDamage(int damage)
+    {
+        currentHealth -= damage;
+        Debug.Log("meomeoemeoemeo");
+
+        //play hurt animation, die animation söbst gibts nu nid -> jonny 
+
+        if (currentHealth <= 0)
+        {
+            Debug.Log("kyskyskyskys");
+            Die();
+        }
+    }
+
+    private void Die()
+    {
+        throw new System.NotImplementedException();
     }
 }
